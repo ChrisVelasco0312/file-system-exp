@@ -19,12 +19,13 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 1024,
-    title: "Chat desktop app demo",
+    title: "File system api demo",
+    autoHideMenuBar: true
   });
   mainWindow.loadURL(
     isDev
-      ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "../build/index.html")}`
+      ? "http://localhost:5173"
+      : `file://${path.join(__dirname, "../dist/index.html")}`
   );
   mainWindow.on("closed", function () {
     mainWindow = null;
